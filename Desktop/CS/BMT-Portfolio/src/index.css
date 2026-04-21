@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "EB Garamond", "Georgia", serif;
+  --color-stone-50: #fafaf9;
+  --color-sand: #e8e0d0;
+  --color-moss: #5c6b4a;
+  --color-ink: #2c2c2c;
+  --color-primary: #aabda0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-primary);
+  color: #2c2c2c;
+  font-family: "EB Garamond", "Georgia", serif;
+}
