@@ -6,7 +6,7 @@ import ArtistStatement from './components/ArtistStatement'
 import Footer from './components/Footer'
 
 export default function App() {
-  const [overlayOpacity, setOverlayOpacity] = useState(0)
+  const [overlayOpacity, setOverlayOpacity] = useState(0.3)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,11 +16,11 @@ export default function App() {
       const start = heroHeight * 0.25
       const end = heroHeight
       if (scrollY <= start) {
-        setOverlayOpacity(0.3)
+        setOverlayOpacity(0.5)
       } else if (scrollY >= end) {
         setOverlayOpacity(0.78)
       } else {
-        setOverlayOpacity(((scrollY - start) / (end - start)) * 0.78)
+        setOverlayOpacity(0.3 + ((scrollY - start) / (end - start)) * (0.78 - 0.3))
       }
     }
     window.addEventListener('scroll', handleScroll, { passive: true })
